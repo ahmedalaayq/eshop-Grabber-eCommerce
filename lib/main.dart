@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       builder: (context, _) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
-          title: 'Grabber',
+          title: 'EShop',
           theme: lightTheme,
           initialRoute: AppRoutes.splashView,
           onGenerateRoute: onGenerateRoute,
