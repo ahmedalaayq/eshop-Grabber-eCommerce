@@ -14,7 +14,7 @@ class BasketComponent extends StatelessWidget {
         borderRadius: .circular(AppSizes.r7),
         color: AppColors.primaryColor,
       ),
-      padding: EdgeInsets.symmetric(horizontal: AppSizes.w20),
+      padding: EdgeInsets.symmetric(horizontal: AppSizes.w16),
       child: Row(
         children: [
           SizedBox(
@@ -48,13 +48,12 @@ class BasketComponent extends StatelessWidget {
               },
             ),
           ),
-          SizedBox(width: AppSizes.w10),
           VerticalDivider(
             color: Colors.white,
             indent: 10,
             endIndent: 10,
           ),
-          SizedBox(width: AppSizes.w10),
+          SizedBox(width: AppSizes.w16),
           Expanded(
             child: Text(
               "View Baskets",
