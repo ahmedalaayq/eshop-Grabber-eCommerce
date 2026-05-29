@@ -37,18 +37,23 @@ class ProductList extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Expanded(
+                SizedBox(
+                  height: AppSizes.h150,
                   child: Stack(
                     children: [
-                      Center(
-                        child: Image.asset(product.image, fit: BoxFit.contain),
+                      Container(
+                        padding: .all(AppSizes.r16),
+                        color: Colors.grey.shade100,
+                        child: Center(
+                          child: Image.asset(product.image, fit: BoxFit.contain),
+                        ),
                       ),
 
                       Consumer<HomeController>(
                         builder:
                             (BuildContext context, controller, Widget? child) {
                               return Positioned(
-                                bottom: 0,
+                                bottom: 6,
                                 right: 0,
                                 child: GestureDetector(
                                   onTap: () => controller.addToBasket(product),
