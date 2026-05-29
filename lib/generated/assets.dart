@@ -6,43 +6,59 @@ import 'package:flutter_svg/flutter_svg.dart';
 class Assets {
   Assets._();
 
-  static const $AssetsImagesGen images = $AssetsImagesGen();
+  static const String flutterLauncherIcons = 'flutter_launcher_icons.yaml';
+  static const $AssetsAssetsGen assets = $AssetsAssetsGen();
+}
+
+class $AssetsAssetsGen {
+  const $AssetsAssetsGen();
+
+  final $AssetsImagesGen images = const $AssetsImagesGen();
 }
 
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
   final AssetGenImage slider1 = const AssetGenImage(
-      'assets/images/Slider 1.png');
+    'assets/images/Slider 1.png',
+  );
   final AssetGenImage slider2 = const AssetGenImage(
-      'assets/images/Slider 2.png');
+    'assets/images/Slider 2.png',
+  );
   final AssetGenImage slider3 = const AssetGenImage(
-      'assets/images/Slider 3.png');
+    'assets/images/Slider 3.png',
+  );
+  final String appIcon = 'assets/images/app_icon.zip';
   final AssetGenImage banana = const AssetGenImage('assets/images/banana.png');
   final AssetGenImage beveragesCat = const AssetGenImage(
-      'assets/images/beverages_cat.png');
+    'assets/images/beverages_cat.png',
+  );
   final SvgGenImage cart = const SvgGenImage('assets/images/cart.svg');
   final AssetGenImage fruitsCat = const AssetGenImage(
-      'assets/images/fruits_cat.png');
+    'assets/images/fruits_cat.png',
+  );
   final SvgGenImage grabber = const SvgGenImage('assets/images/grabber.svg');
   final AssetGenImage laundryCat = const AssetGenImage(
-      'assets/images/laundry_cat.png');
+    'assets/images/laundry_cat.png',
+  );
   final AssetGenImage limoun = const AssetGenImage('assets/images/limoun.png');
   final AssetGenImage milkCat = const AssetGenImage(
-      'assets/images/milk_cat.png');
+    'assets/images/milk_cat.png',
+  );
   final SvgGenImage motocycleIcon = const SvgGenImage(
-      'assets/images/motocycle_icon.svg');
+    'assets/images/motocycle_icon.svg',
+  );
   final AssetGenImage orange = const AssetGenImage('assets/images/orange.png');
   final AssetGenImage pepper = const AssetGenImage('assets/images/pepper.png');
   final AssetGenImage vegetablesCat = const AssetGenImage(
-      'assets/images/vegetables_cat.png');
+    'assets/images/vegetables_cat.png',
+  );
 }
 
 class AssetGenImage {
   const AssetGenImage(this._assetName, {this.size, this.flavors = const {}});
 
   final String _assetName;
-
 
   final Size? size;
   final Set<String> flavors;
@@ -100,15 +116,8 @@ class AssetGenImage {
     );
   }
 
-  ImageProvider provider({
-    AssetBundle? bundle,
-    String? package,
-  }) {
-    return AssetImage(
-      _assetName,
-      bundle: bundle,
-      package: package,
-    );
+  ImageProvider provider({AssetBundle? bundle, String? package}) {
+    return AssetImage(_assetName, bundle: bundle, package: package);
   }
 
   Widget custom({
@@ -186,4 +195,3 @@ class SvgGenImage {
 
   String get keyName => _assetName;
 }
-
