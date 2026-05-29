@@ -38,7 +38,7 @@ class ProductList extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SizedBox(
-                  height: AppSizes.h150,
+                  height: AppSizes.h130,
                   child: Stack(
                     children: [
                       Container(

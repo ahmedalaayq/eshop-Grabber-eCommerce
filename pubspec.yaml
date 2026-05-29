@@ -40,6 +40,7 @@ dependencies:
   carousel_slider: ^5.1.2
   provider: ^6.1.5+1
   flutter_launcher_icons: ^0.14.4
+  animate_do: ^5.1.0
 
 dev_dependencies:
   flutter_test:

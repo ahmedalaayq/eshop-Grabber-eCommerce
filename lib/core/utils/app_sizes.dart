@@ -49,8 +49,10 @@ class AppSizes {
   static final h222 = 222.h;
   static final h100 = 100.h;
   static final h150 = 150.h;
+  static final h130 = 130.h;
   static final h119 = 119.h;
   static final h290 = 290.h;
+  static final h270 = 270.h;
   static final h90 = 90.h;
   static final h80 = 80.h;
   static final h74 = 74.h;

@@ -17,4 +17,10 @@ class HomeController with ChangeNotifier {
   }
 
   bool isProductSelected(ProductModel product) => basketList.contains(product);
+
+  void clearBasketItems()
+  {
+    basketList.clear();
+    notifyListeners();
+  }
 }

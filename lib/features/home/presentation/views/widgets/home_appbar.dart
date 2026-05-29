@@ -45,6 +45,8 @@ class HomeAppbar extends StatelessWidget {
                     right: 0,
                     top: 0,
                     child: Container(
+                      height: AppSizes.h10,
+                      width: AppSizes.w10,
                       padding: EdgeInsets.symmetric(
                         horizontal: AppSizes.w6,
                         vertical: AppSizes.h2,
@@ -52,20 +54,6 @@ class HomeAppbar extends StatelessWidget {
                       decoration: BoxDecoration(
                         color: Colors.red,
                         borderRadius: BorderRadius.circular(AppSizes.r20),
-                      ),
-                      constraints: BoxConstraints(
-                        minWidth: AppSizes.w18,
-                        minHeight: AppSizes.h18,
-                      ),
-                      child: Center(
-                        child: Text(
-                          controller.basketList.length.toString(),
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: AppSizes.sp10,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
                       ),
                     ),
                   ),
