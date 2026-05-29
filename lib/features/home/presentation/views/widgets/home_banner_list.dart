@@ -1,34 +1,45 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:eshop/core/utils/app_sizes.dart';
 import 'package:flutter/material.dart';
+
 class HomeBannerList extends StatelessWidget {
   const HomeBannerList({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return        CarouselSlider(
+    return CarouselSlider(
       options: CarouselOptions(
-        height: AppSizes.h222,
+        height: AppSizes.h200,
+
+        scrollPhysics: const BouncingScrollPhysics(),
+
         autoPlay: true,
-        autoPlayInterval: Duration(seconds: 3),
-        autoPlayCurve: Curves.fastOutSlowIn,
+        autoPlayInterval: const Duration(seconds: 3),
+
+        autoPlayAnimationDuration: const Duration(milliseconds: 800),
+
+        autoPlayCurve: Curves.easeInOut,
+
         enlargeCenterPage: true,
-        enlargeStrategy: CenterPageEnlargeStrategy.height,
+
+        enlargeFactor: 0.18,
+
+        viewportFraction: 0.88,
+
+        enableInfiniteScroll: true,
+
         scrollDirection: Axis.horizontal,
-        viewportFraction: 0.9,
-        enlargeFactor: 0.3,
-        autoPlayAnimationDuration: Duration(milliseconds: 600),
       ),
+
       items: [1, 2, 3].map((i) {
-        return Builder(
-          builder: (BuildContext context) {
-            return Container(
-              height: AppSizes.h222,
-              width: MediaQuery.of(context).size.width,
-              margin: EdgeInsets.symmetric(horizontal: 5.0),
-              child: Image.asset("assets/images/Slider $i.png"),
-            );
-          },
+        return ClipRRect(
+          borderRadius: BorderRadius.circular(AppSizes.r20),
+
+          child: Image.asset(
+            "assets/images/Slider $i.png",
+            width: double.infinity,
+            fit: BoxFit.cover,
+          ),
         );
       }).toList(),
     );
